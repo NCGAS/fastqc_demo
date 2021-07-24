@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! $(command -v singularity) ]; then
+	module load singularity
+fi
+
+VERSION=0.35
+PACKAGE=trimmomatic
+TOOL=trimmomatic
+DIRECTORY=~/Documents/fastqc_demo/software/trimmomatic
+STORAGE=/home/
+
+OPTIONS=$OPTIONS" -B $STORAGE"
+
+singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif $TOOL "$@"

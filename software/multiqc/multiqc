@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! $(command -v singularity) ]; then
+	module load singularity
+fi
+
+VERSION=1.11
+PACKAGE=multiqc
+TOOL=multiqc
+DIRECTORY=~/Documents/fastqc_demo/software/multiqc
+STORAGE=/home/
+
+OPTIONS=$OPTIONS" -B $STORAGE"
+
+singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif $TOOL "$@"
