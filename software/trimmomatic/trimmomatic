@@ -4,7 +4,7 @@ if [ ! $(command -v singularity) ]; then
 	module load singularity
 fi
 
-VERSION=0.35
+VERSION=0.39
 PACKAGE=trimmomatic
 TOOL=trimmomatic
 DIRECTORY=~/Documents/fastqc_demo/software/trimmomatic
