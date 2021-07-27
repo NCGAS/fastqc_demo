@@ -4,5 +4,5 @@ if [ ! $(command -v singularity) ]; then
 	module load singularity
 fi
 
-singularity pull https://depot.galaxyproject.org/singularity/trimmomatic:0.35--hdfd78af_7
-mv -v trimmomatic:0.35* singularity-trimmomatic-0.35.sif
+singularity pull trimmomatic_v0.39.sif oras://registry.forgemia.inra.fr/gafl/singularity/trimmomatic/trimmomatic:latest
+mv -v trimmomatic_v0.39.sif singularity-trimmomatic-0.39.sif
