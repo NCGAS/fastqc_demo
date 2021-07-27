@@ -1,1 +1,1 @@
-export PATH=$PATH:`pwd`/software/fastqc:`pwd`/software/mulitqc:`pwd`/software/trimmomatic
+export PATH=$PATH:`pwd`/software/fastqc:`pwd`/software/multiqc:`pwd`/software/trimmomatic
